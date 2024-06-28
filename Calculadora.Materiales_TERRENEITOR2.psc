@@ -63,16 +63,16 @@ SubProceso menu
 	Escribir  "";
 	Mientras Verdadero Hacer
 		Escribir "|-|-------------------------------|";
-		Escribir "| |  Seleccione una opción: ","      |";
+		Escribir "| |  Seleccione una opciÃ³n: ","      |";
 		Escribir "|-|-------------------------------|";
 		Escribir "|1| Calcular muro de ladrillos    |";
-		Escribir "|2| Calcular viga de hormigón     |";
-		Escribir "|3| Calcular columnas de hormigón |";
+		Escribir "|2| Calcular viga de hormigÃ³n     |";
+		Escribir "|3| Calcular columnas de hormigÃ³n |";
 		Escribir "|4| Calcular contrapisos          |";
 		Escribir "|5| Calcular techo                |";
 		Escribir "|6| Calcular pisos                |";
 		Escribir "|7| Calcular pintura              |";
-		Escribir "|8| Calcular iluminación          |";
+		Escribir "|8| Calcular iluminaciÃ³n          |";
 		Escribir "|9| Salir                         |";
 		Escribir "|-|-------------------------------|";
 		Escribir "";
@@ -98,7 +98,7 @@ SubProceso menu
 				salir(opcion);
 			De Otro Modo:
 				Escribir "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|";
-				Escribir "| Opción inválida, vuelva a intentarlo.|";
+				Escribir "| OpciÃ³n invÃ¡lida, vuelva a intentarlo.|";
 				Escribir "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|";
 				Escribir "";
 		FinSegun
@@ -130,7 +130,7 @@ SubAlgoritmo calcularMuros
 	// C?lculo de la superficie
 	superficie_muro <- altura_muro*ancho_muro;
 	// Pedimos que indique que espesor tendra el muro (solo hay dos opciones 20 o 30 cm)
-	Escribir 'Digite los centímetros de espesor del muro a construir (20cm/30cm):';
+	Escribir 'Digite los centÃ­metros de espesor del muro a construir (20cm/30cm):';
 	Leer espesor_muro;
 	Si espesor_muro <- 20 Entonces
 		ladrillos_final <- 90*superficie_muro;
@@ -152,13 +152,13 @@ FinSi
 Escribir "";
 Escribir "|------------------------------------CALCULO DEL MURO-------------------------------------|";
 Escribir "|";
-	Escribir '| La superficie total del muro es: ', superficie_muro, 'm²';
-	// Ahora mostramos la cantidad de material que requerirá	
-	Escribir "| Para su construcción necesitará: ";
+	Escribir '| La superficie total del muro es: ', superficie_muro, 'mÂ²';
+	// Ahora mostramos la cantidad de material que requerirÃ¡	
+	Escribir "| Para su construcciÃ³n necesitarÃ¡: ";
 	Escribir "| * Cemento: ",cemento_final, "kg";
 	Escribir "| * Ladrillos: ", ladrillos_final;
 	Escribir "| * Espesor muro: ", espesor_muro, "cm";
-	Escribir "| * Arena: ", arena_final, "m³"; 
+	Escribir "| * Arena: ", arena_final, "mÂ³"; 
 	Escribir "|";	
 	Escribir "|----------------------------------FIN CALCULO DEL MURO-----------------------------------|";
 	Escribir "";
@@ -169,7 +169,7 @@ SubProceso calcularViga
 		Definir respuesta Como Caracter;
 		Definir totalCemento, totalArena, totalPiedra, totalHierro Como Real;
 		
-		// Inicialización de acumuladores
+		// InicializaciÃ³n de acumuladores
 		totalCemento <- 0;
 		totalArena <- 0;
 		totalPiedra <- 0;
@@ -177,7 +177,7 @@ SubProceso calcularViga
 		
 		respuesta <- "s";
 		
-		// Ciclo para calcular materiales de múltiples vigas
+		// Ciclo para calcular materiales de mÃºltiples vigas
 		Mientras respuesta = "s" Hacer
 			
 			// Solicitar el largo de la viga al usuario
@@ -208,10 +208,10 @@ SubProceso calcularViga
 			
 			// Preguntar al usuario si desea calcular materiales para otra viga
 			Repetir
-				Escribir "¿Desea calcular los materiales de otra viga? (s/n): ";
+				Escribir "Â¿Desea calcular los materiales de otra viga? (s/n): ";
 				Leer respuesta;
 				Si respuesta <> "s" y respuesta <> "n" Entonces
-					Escribir "Opción inválida. Vuelva a intentar:";
+					Escribir "OpciÃ³n invÃ¡lida. Vuelva a intentar:";
 					Escribir "";
 				FinSi
 			Hasta Que respuesta = "s" o respuesta = "n"
@@ -256,10 +256,10 @@ Subproceso calcularColumna
 	Escribir "";
 	Escribir "|------------------------------------CALCULO DE LA COLUMNA-------------------------------------|";
 	Escribir "|";
-    Escribir "| Para ", cantidadColumna, " columna/s de ", largoColumna, " metros de largo y ", anchoColumna, " metros de ancho se necesitarán:";
+    Escribir "| Para ", cantidadColumna, " columna/s de ", largoColumna, " metros de largo y ", anchoColumna, " metros de ancho se necesitarÃ¡n:";
     Escribir "| * Cemento: ", cemento, " kg";
-    Escribir "| * Arena: ", arena, " m³";
-    Escribir "| * Piedra: ", piedra, " m³";
+    Escribir "| * Arena: ", arena, " mÂ³";
+    Escribir "| * Piedra: ", piedra, " mÂ³";
     Escribir "| * Hierro del 10: ", hierro10, " m";
     Escribir "| * Hierro del 4: ", hierro4, " m";
 	Escribir "|";	
@@ -290,8 +290,8 @@ SubProceso calcularContrapisos
 	Escribir "|";
 	Escribir "| Para un contrapiso de ", espesor, " centimetros de espesor, ", ancho, " metros de ancho y ", largo, " metros de largo se necesitan:";
 	Escribir "| * Cemento: ", volumenCemento, "kg";
-	Escribir "| * Arena: ", volumenArena, "m³";
-	Escribir "| * Piedra: ", volumenPiedra, "m³";
+	Escribir "| * Arena: ", volumenArena, "mÂ³";
+	Escribir "| * Piedra: ", volumenPiedra, "mÂ³";
 	Escribir "|";	
 	Escribir "|----------------------------------FIN CALCULO DE CONTRAPISO-----------------------------------|";
 	Escribir "";
@@ -325,10 +325,10 @@ SubProceso Calculartecho
 	Escribir "";
 	Escribir "|------------------------------------CALCULO DEL TECHO-------------------------------------|";
 	Escribir "|";
-	Escribir "| Para constuir el techo necesitarás: ";
+	Escribir "| Para constuir el techo necesitarÃ¡s: ";
 	Escribir "| * Cantidad de cemento: ", cantidadCemento, "kg";
-	Escribir "| * Cantidad de arena: ", cantidadArena,"m³";
-	Escribir "| * Cantidad de piedra: ", cantidadPiedra, "m³";
+	Escribir "| * Cantidad de arena: ", cantidadArena,"mÂ³";
+	Escribir "| * Cantidad de piedra: ", cantidadPiedra, "mÂ³";
 	Escribir "| * Cantidad de hierro del 8: ", cantidadHierro8, "m";
 	Escribir "| * Cantidad de hierro del 6: ", cantidadHierro6, "m";
 	Escribir "|";	
@@ -351,7 +351,7 @@ SubProceso calcularPisos
 	Escribir "";
 	Escribir "|------------------------------------CALCULO DEL PISO-------------------------------------|";
 	Escribir "|";
-	Escribir "| * Superficie del piso: ", superficie_piso+(0.10*superficie_piso), " m²";
+	Escribir "| * Superficie del piso: ", superficie_piso+(0.10*superficie_piso), " mÂ²";
 	Escribir "|";	
 	Escribir "|----------------------------------FIN CALCULO DEL PISO-----------------------------------|";
 	Escribir "";
@@ -365,7 +365,7 @@ subProceso calcularPintura
 	litros_pintura <- superficie / 6;
 	Escribir "|------------------------------CALCULO DE PINTURA-------------------------------|";
 	Escribir "|                                                                               |";
-	Escribir "| * Usted necesita ",redon(litros_pintura), " litros de pintura para pintar una superficie ",superficie,"m²";
+	Escribir "| * Usted necesita ",redon(litros_pintura), " litros de pintura para pintar una superficie ",superficie,"mÂ²";
 	Escribir "|                                                                               |";
 	Escribir "|----------------------------FIN CALCULO DE PINTURA-----------------------------|";
 	Escribir "";
@@ -381,16 +381,16 @@ FinSubProceso
 SubProceso  CalcularIluminacion
     Definir superficie, iluminacion Como Real;
     Escribir "";
-    Escribir "Ingrese la superficie de la habitación en metros cuadrados:";
+    Escribir "Ingrese la superficie de la habitaciÃ³n en metros cuadrados:";
     Leer superficie;
     
     iluminacion <- superficie * 0.20;
 	Escribir "";
-	Escribir "|-------------------------CALCULO DE ILUMINACIÓN-------------------------------------|";
+	Escribir "|-------------------------CALCULO DE ILUMINACIÃ“N-------------------------------------|";
 	Escribir "|";
-    Escribir "| * Superficie mínima de iluminación natural: ", iluminacion;
+    Escribir "| * Superficie mÃ­nima de iluminaciÃ³n natural: ", iluminacion;
 	Escribir "|";
-	Escribir "|------------------------FIN CALCULO DE ILUMINACIÓN----------------------------------|";
+	Escribir "|------------------------FIN CALCULO DE ILUMINACIÃ“N----------------------------------|";
 	Escribir "";
 	
 FinSubProceso
