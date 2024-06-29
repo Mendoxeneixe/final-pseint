@@ -278,7 +278,7 @@ SubProceso calcularContrapisos
 	Escribir "Ingrese el largo del contrapiso en metros:";
 	Leer largo;
 	
-	aux <- espesor / 100;
+	aux <- espesor * 0.01;
 	espesor <- aux;
 	
 	volumenCemento <- espesor * ancho * largo * 105;
@@ -288,7 +288,8 @@ SubProceso calcularContrapisos
 	Escribir "";
 	Escribir "|------------------------------------CALCULO DE CONTRAPISO-------------------------------------|";
 	Escribir "|";
-	Escribir "| Para un contrapiso de ", espesor, " centimetros de espesor, ", ancho, " metros de ancho y ", largo, " metros de largo se necesitan:";
+	Escribir "| Para un contrapiso de ", espesor, " metro/os de espesor, ", "(",espesor * 100, " centimetros","), " , ancho, " metro/os de ancho y ", largo, " metro/os de largo se necesitan:";
+
 	Escribir "| * Cemento: ", volumenCemento, "kg";
 	Escribir "| * Arena: ", volumenArena, "m³";
 	Escribir "| * Piedra: ", volumenPiedra, "m³";
